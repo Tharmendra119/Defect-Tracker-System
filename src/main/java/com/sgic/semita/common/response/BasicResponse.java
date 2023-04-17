@@ -1,11 +1,7 @@
 package com.sgic.semita.common.response;
 
 import com.sgic.semita.enums.RestApiResponseStatus;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 public class BasicResponse extends ApiResponse {
   private String message;
 
@@ -19,6 +15,14 @@ public class BasicResponse extends ApiResponse {
 
   public BasicResponse(RestApiResponseStatus restApiResponseStatus, String message) {
     super(restApiResponseStatus);
+    this.message = message;
+  }
+
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(String message) {
     this.message = message;
   }
 }
