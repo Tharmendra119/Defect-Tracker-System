@@ -1,15 +1,28 @@
 package com.sgic.semita.validation;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+
 public class ValidationFailure {
   private String message;
   private String code;
 
-  public ValidationFailure(String message, String code) {
+  public String getMessage() {
+	return message;
+}
+
+public void setMessage(String message) {
+	this.message = message;
+}
+
+public String getCode() {
+	return code;
+}
+
+public void setCode(String code) {
+	this.code = code;
+}
+
+public ValidationFailure(String message, String code) {
     this.message = message;
     this.code = code;
   }

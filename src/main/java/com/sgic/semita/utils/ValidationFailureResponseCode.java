@@ -3,11 +3,9 @@ package com.sgic.semita.utils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+
+
 @Component
 @PropertySource("classpath:validationmessage.properties")
 public class ValidationFailureResponseCode {
@@ -19,4 +17,21 @@ public class ValidationFailureResponseCode {
 
   @Value("${validation.designation.notexists}")
   private String designationNotExists;
+
+public String getDesignationAlreadyExists() {
+	return designationAlreadyExists;
+}
+
+public void setDesignationAlreadyExists(String designationAlreadyExists) {
+	this.designationAlreadyExists = designationAlreadyExists;
+}
+
+public String getDesignationNotExists() {
+	return designationNotExists;
+}
+
+public void setDesignationNotExists(String designationNotExists) {
+	this.designationNotExists = designationNotExists;
+}
+  
 }
