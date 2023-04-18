@@ -1,5 +1,5 @@
 package com.sgic.semita.entities;
 
-public class Employee {
+public class Role {
 
 }
