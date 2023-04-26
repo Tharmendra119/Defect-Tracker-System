@@ -19,6 +19,7 @@ import com.sgic.semita.entities.Designation;
 import com.sgic.semita.enums.RestApiResponseStatus;
 import com.sgic.semita.request.dto.DesignationRequestDto;
 import com.sgic.semita.services.DesignationService;
+
 import com.sgic.semita.utils.Constants;
 import com.sgic.semita.utils.EndPointURI;
 import com.sgic.semita.utils.ValidationFailureResponseCode;
@@ -31,6 +32,8 @@ public class DesignationController {
 
   @Autowired
   private ValidationFailureResponseCode validationFailureResponseCode;
+
+
 
   /*
    * Description: Create designation API || Author: Keerthana || Date: 16-04-2023

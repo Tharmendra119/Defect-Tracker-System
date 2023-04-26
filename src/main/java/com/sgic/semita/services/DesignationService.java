@@ -4,6 +4,7 @@ import java.util.List;
 import com.sgic.semita.entities.Designation;
 
 public interface DesignationService {
+  
   public void saveDesignation(Designation designation);
 
   public List<Designation> getAllDesignation();

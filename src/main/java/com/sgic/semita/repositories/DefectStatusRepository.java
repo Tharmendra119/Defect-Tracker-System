@@ -1,5 +1,8 @@
 package com.sgic.semita.repositories;
 
-public interface DefectStatusRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.sgic.semita.entities.DefectStatus;
+
+public interface DefectStatusRepository extends JpaRepository<DefectStatus, ID>{
 
 }
