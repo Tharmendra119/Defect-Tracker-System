@@ -14099,7 +14099,13 @@
 									"type": "noauth"
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{token_OLE_PLAY}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{base_OLE_PLAY}}api/V4.1/users?filters.activestatus=3",
 									"host": [
