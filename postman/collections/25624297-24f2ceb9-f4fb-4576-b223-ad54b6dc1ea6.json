@@ -14087,6 +14087,37 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "users/Filter",
+							"id": "25624297-a2abc380-03a3-47cc-a3b7-34be8dcc95b4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_OLE_PLAY}}api/V4.1/users?filters.activestatus=3",
+									"host": [
+										"{{base_OLE_PLAY}}api"
+									],
+									"path": [
+										"V4.1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "filters.activestatus",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "25624297-7c2be832-828a-4306-b3c1-ca2125aa1c5b"
