@@ -19,7 +19,8 @@
 									""
 								],
 								"type": "text/javascript",
-								"packages": {}
+								"packages": {},
+								"requests": {}
 							}
 						},
 						{
@@ -28,14 +29,23 @@
 								"id": "fafd44dd-cb5d-4a9d-93f1-21735dfb3a01",
 								"exec": [
 									"\r",
-									"var data = pm.response.json();\r",
-									"var body = pm.response.json();\r",
+									"pm.test(\"Verify response time\", function () {\r",
+									"    var responseTime = pm.response.responseTime;\r",
+									"    console.log(\"Response Time: \" + responseTime + \" ms\");  // Logging the actual response time\r",
+									"});\r",
 									"\r",
-									"var Token = body.meta.token;\r",
-									"pm.environment.set(\"token_OLE_PLAY\",Token);"
+									"let token = pm.response.json().meta.token;\r",
+									"\r",
+									"if (token) {\r",
+									"    pm.environment.set(\"token_OLE_PLAY\", token);\r",
+									"    console.log(\"Token stored successfully!\");\r",
+									"} else {\r",
+									"    console.log(\"Token not found in response.\");\r",
+									"}"
 								],
 								"type": "text/javascript",
-								"packages": {}
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
@@ -56,11 +66,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_OLE_PLAY}}api/v4.1/users/login?fields=token",
+							"raw": "{{base_OLE_PLAY}}/api/v4.1/users/login?fields=token",
 							"host": [
-								"{{base_OLE_PLAY}}api"
+								"{{base_OLE_PLAY}}"
 							],
 							"path": [
+								"api",
 								"v4.1",
 								"users",
 								"login"
